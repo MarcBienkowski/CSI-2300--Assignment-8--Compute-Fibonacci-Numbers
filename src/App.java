@@ -24,16 +24,10 @@ public class App {
     }
     public static void main(String[] args) throws Exception {
         try{
-            int input;
-            Scanner scanner = new Scanner(System.in);
-            input = scanner.nextInt();
+            int input = Integer.parseInt(args[0]);
             System.out.println(Fibonacci(input));
-            scanner.close();
-        } catch(InputMismatchException e) {
+        } catch(NumberFormatException e) {
             System.out.println("ERROR: Please enter a integer value");
         }
-            
-        
-        
     }
 } 
